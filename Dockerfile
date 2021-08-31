@@ -1,2 +1,2 @@
-FROM alpine:3.14
+FROM busybox
 CMD echo "Hello World!!"

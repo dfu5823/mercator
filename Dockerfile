@@ -49,9 +49,8 @@ COPY --from=build \
     /opt/venv/lib/python3.9/site-packages/mercator
 
 ENTRYPOINT [ \
-    "/opt/venv/bin/gunicorn", \
     "--workers", "4", \
     "--bind", "0.0.0.0:8000", \
     "--access-logfile", "-", \
-    "support:app" \
+    "mercator:app" \
 ]

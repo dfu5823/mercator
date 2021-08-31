@@ -2,12 +2,13 @@
 name = "Mercator"
 version = "0.1.0"
 description = ""
-authors = ["Me <maldonadojsm@gmail.com>"]
+authors = ["Juan Maldonado <juan.maldonado@phyos.net>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 Flask = "^2.0.1"
 coverage = "^5.5"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

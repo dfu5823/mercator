@@ -39,10 +39,8 @@ jobs:
           name: Run Pytest, Report Coverage
           command: |
             poetry run coverage run --omit="/home/circleci/.cache/pypoetry/virtualenvs" -m pytest
-            poetry run coveralls
 
- 
-# Define workflows
+ # Define workflows
 workflows:
   version: 2
 

@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg libopencv-dev python3-opencv
 #RUN python3 -m pip install --user pipx
 #RUN python3 -m pipx ensurepath --force
-RUN pipx install poetry
+RUN python3 -m pip install poetry
 
 COPY pyproject.toml poetry.lock /src/
 WORKDIR /src

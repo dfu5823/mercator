@@ -7,10 +7,13 @@ jobs:
         docker:
             - image: circleci/python:3.8
 
+        working_directory: ~/Mercator
+
         # The steps for build-and-test
         steps:
             # Grab Code
-            - checkout
+            - checkout:
+                  path: ~/Mercator
 
             # Restore old cache if no dependencies have been added to pyproject.toml file (speeds build up).
             - restore_cache:

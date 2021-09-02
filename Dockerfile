@@ -10,10 +10,8 @@ RUN pip3 install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-dev
 
-COPY /opt/venv/lib/python3.9/site-packages/mercator
-
 ENTRYPOINT [ \
-    "gunicorn", \
+    "/opt/venv/bin/gunicorn", \
     "--workers", "4", \
     "--bind", "0.0.0.0:8000", \
     "--access-logfile", "-", \

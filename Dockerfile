@@ -1,8 +1,8 @@
 FROM python:3.9
-RUN mkdir /mercator 
-COPY /mercator /mercator
-COPY pyproject.toml /mercator 
-WORKDIR /mercator
+RUN mkdir /src 
+COPY /mercator /src
+COPY pyproject.toml /src 
+WORKDIR /src
 
 
 ENV PYTHONPATH=${PYTHONPATH}:${PWD} 
@@ -11,7 +11,7 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --no-dev
 
 ENTRYPOINT [ \
-    "/opt/venv/bin/gunicorn", \
+    "gunicorn", \
     "--workers", "4", \
     "--bind", "0.0.0.0:8000", \
     "--access-logfile", "-", \

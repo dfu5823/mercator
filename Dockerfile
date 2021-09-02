@@ -1,20 +1,12 @@
-# Overly complicated multistage build to reduce incremental upload on push to
-# *just* the files from this project, ie about 12 KiB. This could almost
-# certainly be simpler.
-
-
-# Export dependencies as requirements.txt
-FROM ubuntu:21.04
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg libopencv-dev python3-opencv pip
-#RUN python3 -m pip install --user pipx
-#RUN python3 -m pipx ensurepath --force
-RUN python3 -m pip install poetry
-
-COPY pyproject.toml poetry.lock /src/
-WORKDIR /src
-
-RUN poetry install 
+FROM python:3.9
+RUN mkdir /app 
+COPY /app /app
+COPY pyproject.toml /app 
+WORKDIR /app
+ENV PYTHONPATH=${PYTHONPATH}:${PWD} 
+RUN pip3 install poetry
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-dev
 
 ENTRYPOINT [ \
     "gunicorn", \

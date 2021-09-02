@@ -6,7 +6,7 @@
 # Export dependencies as requirements.txt
 FROM ubuntu:21.04 as gen-requirements
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install --assume-yes python3-venv pipx
+RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg
 #RUN python3 -m pip install --user pipx
 #RUN python3 -m pipx ensurepath --force
 RUN pipx install poetry

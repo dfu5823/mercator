@@ -42,7 +42,8 @@ def create_app():
             file = request.files['file']
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                file.save(os.path.join(os.path.abspath(
+                    '../Mercator/mercator/logs/'), filename))
                 filepath = app.config['UPLOAD_FOLDER'] + "/" + filename
 
                 img = cv.imread(filepath, cv.IMREAD_GRAYSCALE)

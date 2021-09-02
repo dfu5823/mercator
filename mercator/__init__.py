@@ -15,7 +15,7 @@ import cv2 as cv
 
 def create_app():
 
-    UPLOAD_FOLDER = '../Mercator/mercator/logs/'
+    UPLOAD_FOLDER = os.path.abspath('../Mercator/mercator/logs/')
     ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
     app = Flask(__name__)

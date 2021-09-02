@@ -1,9 +1,7 @@
 # Export dependencies as requirements.txt
 FROM ubuntu:21.04 as gen-requirements
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg libopencv-dev python3-opencv
-#RUN python3 -m pip install --user pipx
-#RUN python3 -m pipx ensurepath --force
+RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg 
 RUN pipx install poetry
 
 COPY pyproject.toml poetry.lock /src/
@@ -13,7 +11,7 @@ RUN pipx run poetry export --output requirements.txt
 
 
 # Install dependencies
-FROM ubuntu:21.04 as deps-installer
+FROM python:3.9-alpine as deps-installer
 
 COPY --from=gen-requirements /src/requirements.txt /tmp/requirements.txt
 RUN python -m venv /opt/venv \
@@ -22,7 +20,7 @@ RUN python -m venv /opt/venv \
 
 
 # Minimal image with dependencies installed
-FROM ubuntu:21.04 as deps
+FROM python:3.9-alpine as deps
 COPY --from=deps-installer /opt/venv /opt/venv
 
 

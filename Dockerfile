@@ -6,7 +6,7 @@
 # Export dependencies as requirements.txt
 FROM ubuntu:21.04
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg libopencv-dev python3-opencv
+RUN apt-get update && apt-get install --assume-yes python3-venv pipx ffmpeg libopencv-dev python3-opencv pip
 #RUN python3 -m pip install --user pipx
 #RUN python3 -m pipx ensurepath --force
 RUN python3 -m pip install poetry

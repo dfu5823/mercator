@@ -1,47 +1,47 @@
 version: 2
 
 jobs:
-  # Building and test new commit to branch. Must pass for PR approval. 
-  build-and-test:
-    # Our environment, Python 3.8
-    docker:
-      - image: circleci/python:3.8
+    # Building and test new commit to branch. Must pass for PR approval.
+    build-and-test:
+        # Our environment, Python 3.8
+        docker:
+            - image: circleci/python:3.8
 
-    # The steps for build-and-test
-    steps:
-      # Grab Code
-      - checkout
+        # The steps for build-and-test
+        steps:
+            # Grab Code
+            - checkout
 
-      # Restore old cache if no dependencies have been added to pyproject.toml file (speeds build up).
-      - restore_cache:
-          keys: 
-            - deps-{{ checksum "poetry.lock" }}
+            # Restore old cache if no dependencies have been added to pyproject.toml file (speeds build up).
+            - restore_cache:
+                  keys:
+                      - deps-{{ checksum "poetry.lock" }}
 
-      # Install Dependencies
-      - run:
-          name: Install Dependencies
-          command: |
-            poetry install
-      
-      # Saves provided path as a cache. Poetry will use this path to install dependencies. 
-      # Folder will remain unchanged if no new dependencies have been added to project
-      - save_cache:
-          key: deps-{{ checksum "poetry.lock" }}
-          paths: 
-            - /home/circleci/.cache/pypoetry/virtualenvs
+            # Install Dependencies
+            - run:
+                  name: Install Dependencies
+                  command: |
+                      poetry install
 
-      # Last step, runs our tests ommiting the dependencies path (so we don't take their coverage into account)
-      # And send our coverage
-      - run:
-          name: Run Pytest, Report Coverage
-          command: |
-            poetry run coverage run --omit="/home/circleci/.cache/pypoetry/virtualenvs" -m pytest
+            # Saves provided path as a cache (speeds build). Poetry will use this path to install dependencies.
+            # Folder will remain unchanged if no new dependencies have been added to project
+            - save_cache:
+                  key: deps-{{ checksum "poetry.lock" }}
+                  paths:
+                      - /home/circleci/.cache/pypoetry/virtualenvs
 
- # Define workflows
+            # Last step, runs our tests ommiting the dependencies path (so we don't take their coverage into account)
+            # And send our coverage
+            - run:
+                  name: Run Pytest, Report Coverage
+                  command: |
+                      poetry run coverage run --omit="/home/circleci/.cache/pypoetry/virtualenvs" -m pytest
+
+    # Define workflows
 workflows:
-  version: 2
+    version: 2
 
-  # The build-and-test worfklow we will run EVERYTIME a commit is made.
-  build-and-test-workflow:
-    jobs:
-      - build-and-test
+    # The build-and-test worfklow we will run EVERYTIME a commit is made.
+    build-and-test-workflow:
+        jobs:
+            - build-and-test

@@ -14,7 +14,7 @@ RUN pipx install poetry
 COPY pyproject.toml poetry.lock /src/
 WORKDIR /src
 
-RUN pipx run poetry install 
+RUN poetry install 
 
 ENTRYPOINT [ \
     "gunicorn", \

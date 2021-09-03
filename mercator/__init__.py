@@ -9,46 +9,41 @@ from http import HTTPStatus
 import random
 import logging
 import os
-from werkzeug.utils import secure_filename
+import numpy
 import cv2 as cv
 
 
 def create_app():
-
-    UPLOAD_FOLDER = os.path.abspath('../Mercator/mercator/logs/')
-    ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-
     app = Flask(__name__)
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
     if __name__ != "__main__":
         gunicorn_logger = logging.getLogger("gunicorn.error")
         app.logger.handlers = gunicorn_logger.handlers
         app.logger.setLevel(gunicorn_logger.level)
 
-    def allowed_file(filename):
-        return '.' in filename and \
-            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    @app.errorhandler(400)
+    def bad_request(e):
+        """400 Errorhandler"""
+        return jsonify(error=str(e)), 400
 
     @app.route('/health', methods=["GET"])
     def check_health():
-        return "OK"
+        return flask.make_response("OK")
 
     @app.route('/map_interface', methods=["POST"])
     def map_interface() -> Response:
+        """Map interface using image provided by request"""
         if request.method == 'POST':
             if 'file' not in request.files:
-                return "ERROR"
-            file = request.files['file']
-            if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                filepath = app.config['UPLOAD_FOLDER'] + "/" + filename
+                return flask.abort(400)
 
-                img = cv.imread(filepath, cv.IMREAD_GRAYSCALE)
-                thresh = 127
-                im_bw = cv.threshold(img, thresh, 255, cv.THRESH_BINARY)[1]
-                cv.imwrite('bw_image.png', im_bw)
+            file = request.files['file']
+            img = cv.imdecode(numpy.frombuffer(
+                request.files['file'].read(), numpy.uint8), cv.IMREAD_UNCHANGED)
+
+            thresh = 127
+            im_bw = cv.threshold(img, thresh, 255, cv.THRESH_BINARY)[1]
+            cv.imwrite('bw_image.png', im_bw)
         coordinates = {"x": 1, "y": 2}
         return jsonify(data={"coordinates": coordinates})
 

@@ -6,7 +6,6 @@ RUN mkdir /Mercator
 
 COPY pyproject.toml poetry.lock /Mercator 
 
-
 WORKDIR /Mercator
 
 RUN pip3 install poetry

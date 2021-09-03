@@ -12,7 +12,6 @@ import os
 import numpy
 import cv2 as cv
 
-
 def create_app():
     app = Flask(__name__)
 

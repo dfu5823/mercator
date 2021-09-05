@@ -1,4 +1,6 @@
 # Mercator
+## Installing Poetry
+    brew install poetry
 
 ## Development
 This project uses [poetry][poetry-docs] to manage dependencies. Before anything else, install Poetry and then run

@@ -25,6 +25,9 @@ jobs:
                   name: Install Dependencies
                   command: |
                       poetry install
+            - run:
+                  name: Install ffmpeg and tesseract OCR
+                  command: sudo apt-get install --assume-yes ffmpeg tesseract-ocr
 
             # Saves provided path as a cache (speeds build). Poetry will use this path to install dependencies.
             # Folder will remain unchanged if no new dependencies have been added to project

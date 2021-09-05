@@ -3,6 +3,9 @@ name = "Mercator"
 version = "0.1.0"
 description = ""
 authors = ["Juan Maldonado <juan.maldonado@phyos.net>"]
+packages = [
+    { include = "mapper", from = "mercator"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -12,6 +15,9 @@ gunicorn = "^20.1.0"
 requests = "^2.26.0"
 Werkzeug = "^2.0.1"
 opencv-python = "^4.5.3"
+imutils = "^0.5.4"
+pytesseract = "^0.3.8"
+jsbeautifier = "^1.14.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

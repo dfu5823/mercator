@@ -11,11 +11,14 @@ import logging
 import os
 import numpy
 import cv2 as cv
+from mapper.mapper import Mapper
 
 
 def create_app():
-    app = Flask(__name__)
+    # Initialize Screen Mapper
+    mapper = Mapper()
 
+    app = Flask(__name__)
     if __name__ != "__main__":
         gunicorn_logger = logging.getLogger("gunicorn.error")
         app.logger.handlers = gunicorn_logger.handlers
@@ -41,10 +44,17 @@ def create_app():
             img = cv.imdecode(numpy.frombuffer(
                 request.files['file'].read(), numpy.uint8), cv.IMREAD_UNCHANGED)
 
-            thresh = 127
-            im_bw = cv.threshold(img, thresh, 255, cv.THRESH_BINARY)[1]
-            cv.imwrite('bw_image.png', im_bw)
-        coordinates = {"x": 1, "y": 2}
-        return jsonify(data={"coordinates": coordinates})
+            # thresh = 127
+            # im_bw = cv.threshold(img, thresh, 255, cv.THRESH_BINARY)[1]
+            # cv.imwrite('bw_image.png', im_bw)
+
+            # coordinates = {"x": 1, "y": 2}
+            # return jsonify(data={"coordinates": coordinates})
+
+            mapper.map_interface(img)
+            result = mapper.gui_map.get_map()
+            if result is not None:
+                return result
+            return flask.abort(400)
 
     return app

@@ -16,7 +16,7 @@ def test_health_check(client):
 def test_map_interface(client):
     """Test /map_interface endpoint"""
     # Create temp file
-    with open("tests/testimage.png", 'rb') as img:
+    with open("tests/unit/testimage.png", 'rb') as img:
         imgByteIO = io.BytesIO(img.read())
 
     tmp_file = {'file': (imgByteIO, 'testimage.png')}

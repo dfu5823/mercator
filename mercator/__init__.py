@@ -13,7 +13,6 @@ import numpy
 import cv2 as cv
 from mapper.mapper import Mapper
 
-
 def create_app():
     # Initialize Screen Mapper
     mapper = Mapper()

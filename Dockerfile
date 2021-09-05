@@ -12,7 +12,6 @@ RUN mkdir /Mercator
 # Copy project files (this example assumes these are at root dir) to cotainer work directory
 COPY pyproject.toml poetry.lock /Mercator 
 
-# Set work directory. All further RUN/COPY/ENTRYPOINT/CMD/ADD in file will be exectued within WORKDIR dir
 WORKDIR /Mercator
 
 # Install poetry and install python dependencies

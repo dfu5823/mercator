@@ -1,0 +1,35 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "NURSE PC",
+                "Words": [{
+                    "WordText": "NURSE",
+                    "Left": 23.0,
+                    "Top": 19.0,
+                    "Height": 17.0,
+                    "Width": 80.0
+                }, {
+                    "WordText": "PC",
+                    "Left": 113.0,
+                    "Top": 19.0,
+                    "Height": 17.0,
+                    "Width": 30.0
+                }],
+                "MaxHeight": 17.0,
+                "MinTop": 19.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "NURSE PC\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

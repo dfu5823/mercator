@@ -1,0 +1,40 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "conf.",
+                "Words": [{
+                    "WordText": "conf.",
+                    "Left": 44.0,
+                    "Top": 18.0,
+                    "Height": 13.0,
+                    "Width": 40.0
+                }],
+                "MaxHeight": 13.0,
+                "MinTop": 18.0
+            }, {
+                "LineText": "only",
+                "Words": [{
+                    "WordText": "only",
+                    "Left": 47.0,
+                    "Top": 39.0,
+                    "Height": 17.0,
+                    "Width": 36.0
+                }],
+                "MaxHeight": 17.0,
+                "MinTop": 39.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 2"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "conf.\r\nonly\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

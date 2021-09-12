@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install --assume-yes ffmpeg tesseract-ocr
 # Build the container's work directory
 RUN mkdir /Mercator
 
-# Copy project files (this example assumes these are at root dir) to cotainer work directory
+# Copy project files (this example assumes these are at root dir) to container work directory
 COPY pyproject.toml poetry.lock /Mercator 
 
 WORKDIR /Mercator

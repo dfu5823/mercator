@@ -1,0 +1,35 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "End case",
+                "Words": [{
+                    "WordText": "End",
+                    "Left": 21.0,
+                    "Top": 24.0,
+                    "Height": 15.0,
+                    "Width": 31.0
+                }, {
+                    "WordText": "case",
+                    "Left": 59.0,
+                    "Top": 24.0,
+                    "Height": 13.0,
+                    "Width": 40.0
+                }],
+                "MaxHeight": 15.0,
+                "MinTop": 24.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "End case\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

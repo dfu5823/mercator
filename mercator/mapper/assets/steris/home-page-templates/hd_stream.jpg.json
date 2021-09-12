@@ -1,0 +1,58 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "HD Stream",
+                "Words": [{
+                    "WordText": "HD",
+                    "Left": 198.0,
+                    "Top": 13.0,
+                    "Height": 14.0,
+                    "Width": 26.0
+                }, {
+                    "WordText": "Stream",
+                    "Left": 232.0,
+                    "Top": 13.0,
+                    "Height": 14.0,
+                    "Width": 65.0
+                }],
+                "MaxHeight": 14.0,
+                "MinTop": 13.0
+            }, {
+                "LineText": "(Src: In-Light Camera)",
+                "Words": [{
+                    "WordText": "(Src:",
+                    "Left": 132.0,
+                    "Top": 40.0,
+                    "Height": 16.0,
+                    "Width": 34.0
+                }, {
+                    "WordText": "In-Light",
+                    "Left": 174.0,
+                    "Top": 40.0,
+                    "Height": 16.0,
+                    "Width": 54.0
+                }, {
+                    "WordText": "Camera)",
+                    "Left": 234.0,
+                    "Top": 40.0,
+                    "Height": 16.0,
+                    "Width": 62.0
+                }],
+                "MaxHeight": 16.0,
+                "MinTop": 40.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 2"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "HD Stream\r\n(Src: In-Light Camera)\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

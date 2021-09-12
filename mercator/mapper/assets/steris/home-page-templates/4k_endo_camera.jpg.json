@@ -1,0 +1,41 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "4K Endo Camera",
+                "Words": [{
+                    "WordText": "4K",
+                    "Left": 22.0,
+                    "Top": 18.0,
+                    "Height": 17.0,
+                    "Width": 29.0
+                }, {
+                    "WordText": "Endo",
+                    "Left": 58.0,
+                    "Top": 18.0,
+                    "Height": 17.0,
+                    "Width": 53.0
+                }, {
+                    "WordText": "Camera",
+                    "Left": 121.0,
+                    "Top": 18.0,
+                    "Height": 17.0,
+                    "Width": 82.0
+                }],
+                "MaxHeight": 17.0,
+                "MinTop": 18.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "4K Endo Camera\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

@@ -1,0 +1,29 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "Conference-ln",
+                "Words": [{
+                    "WordText": "Conference-ln",
+                    "Left": 23.0,
+                    "Top": 18.0,
+                    "Height": 21.0,
+                    "Width": 150.0
+                }],
+                "MaxHeight": 21.0,
+                "MinTop": 18.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "Conference-ln\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

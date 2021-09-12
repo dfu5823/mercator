@@ -1,0 +1,35 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "In-Light Camera",
+                "Words": [{
+                    "WordText": "In-Light",
+                    "Left": 23.0,
+                    "Top": 19.0,
+                    "Height": 22.0,
+                    "Width": 79.0
+                }, {
+                    "WordText": "Camera",
+                    "Left": 110.0,
+                    "Top": 19.0,
+                    "Height": 17.0,
+                    "Width": 83.0
+                }],
+                "MaxHeight": 22.0,
+                "MinTop": 19.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "In-Light Camera\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

@@ -13,6 +13,11 @@ import numpy
 import cv2 as cv
 from mapper.mapper import Mapper
 
+''' Add the path to file here eg. from mercator.mapper.mapping_algorithms.ocr_space_matching import ocr_space_matching'''
+from mercator.mapper.mapping_algorithms.ocr_space_matching import ocr_space_matching
+from mercator.mapper.ocr_algorithms.ocr import extract_text
+''''''
+
 def create_app():
     # Initialize Screen Mapper
     mapper = Mapper()

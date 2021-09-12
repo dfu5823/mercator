@@ -1,0 +1,59 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "4K Sur ical Dis la 1",
+                "Words": [{
+                    "WordText": "4K",
+                    "Left": 99.0,
+                    "Top": 12.0,
+                    "Height": 14.0,
+                    "Width": 25.0
+                }, {
+                    "WordText": "Sur",
+                    "Left": 131.0,
+                    "Top": 12.0,
+                    "Height": 14.0,
+                    "Width": 31.0
+                }, {
+                    "WordText": "ical",
+                    "Left": 174.0,
+                    "Top": 11.0,
+                    "Height": 15.0,
+                    "Width": 30.0
+                }, {
+                    "WordText": "Dis",
+                    "Left": 213.0,
+                    "Top": 11.0,
+                    "Height": 15.0,
+                    "Width": 28.0
+                }, {
+                    "WordText": "la",
+                    "Left": 254.0,
+                    "Top": 11.0,
+                    "Height": 15.0,
+                    "Width": 15.0
+                }, {
+                    "WordText": "1",
+                    "Left": 287.0,
+                    "Top": 12.0,
+                    "Height": 14.0,
+                    "Width": 10.0
+                }],
+                "MaxHeight": 15.0,
+                "MinTop": 11.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "4K Sur ical Dis la 1\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

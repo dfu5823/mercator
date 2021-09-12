@@ -1,0 +1,46 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "Conference-out",
+                "Words": [{
+                    "WordText": "Conference-out",
+                    "Left": 150.0,
+                    "Top": 12.0,
+                    "Height": 15.0,
+                    "Width": 148.0
+                }],
+                "MaxHeight": 15.0,
+                "MinTop": 12.0
+            }, {
+                "LineText": "(Src: Windowing)",
+                "Words": [{
+                    "WordText": "(Src:",
+                    "Left": 170.0,
+                    "Top": 40.0,
+                    "Height": 16.0,
+                    "Width": 34.0
+                }, {
+                    "WordText": "Windowing)",
+                    "Left": 212.0,
+                    "Top": 40.0,
+                    "Height": 16.0,
+                    "Width": 84.0
+                }],
+                "MaxHeight": 16.0,
+                "MinTop": 40.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 2"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "Conference-out\r\n(Src: Windowing)\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "328",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

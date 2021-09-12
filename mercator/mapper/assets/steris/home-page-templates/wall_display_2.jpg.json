@@ -1,0 +1,58 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "Wall Display 2",
+                "Words": [{
+                    "WordText": "Wall",
+                    "Left": 165.0,
+                    "Top": 11.0,
+                    "Height": 16.0,
+                    "Width": 39.0
+                }, {
+                    "WordText": "Display",
+                    "Left": 212.0,
+                    "Top": 10.0,
+                    "Height": 20.0,
+                    "Width": 67.0
+                }, {
+                    "WordText": "2",
+                    "Left": 286.0,
+                    "Top": 10.0,
+                    "Height": 14.0,
+                    "Width": 11.0
+                }],
+                "MaxHeight": 20.0,
+                "MinTop": 10.0
+            }, {
+                "LineText": "(Src: Windowing)_",
+                "Words": [{
+                    "WordText": "(Src:",
+                    "Left": 170.0,
+                    "Top": 39.0,
+                    "Height": 16.0,
+                    "Width": 35.0
+                }, {
+                    "WordText": "Windowing)_",
+                    "Left": 212.0,
+                    "Top": 37.0,
+                    "Height": 16.0,
+                    "Width": 88.0
+                }],
+                "MaxHeight": 16.0,
+                "MinTop": 37.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 2"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "Wall Display 2\r\n(Src: Windowing)_\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "312",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

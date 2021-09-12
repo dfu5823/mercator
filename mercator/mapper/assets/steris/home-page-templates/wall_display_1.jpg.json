@@ -1,0 +1,46 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "Wall",
+                "Words": [{
+                    "WordText": "Wall",
+                    "Left": 165.0,
+                    "Top": 10.0,
+                    "Height": 16.0,
+                    "Width": 39.0
+                }],
+                "MaxHeight": 16.0,
+                "MinTop": 10.0
+            }, {
+                "LineText": "(Src: Windowingjl",
+                "Words": [{
+                    "WordText": "(Src:",
+                    "Left": 170.0,
+                    "Top": 38.0,
+                    "Height": 16.0,
+                    "Width": 35.0
+                }, {
+                    "WordText": "Windowingjl",
+                    "Left": 212.0,
+                    "Top": 31.0,
+                    "Height": 20.0,
+                    "Width": 93.0
+                }],
+                "MaxHeight": 20.0,
+                "MinTop": 31.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 2"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "Wall\r\n(Src: Windowingjl\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "343",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

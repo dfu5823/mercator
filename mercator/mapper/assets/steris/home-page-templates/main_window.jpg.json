@@ -1,0 +1,35 @@
+{
+    "ParsedResults": [{
+        "TextOverlay": {
+            "Lines": [{
+                "LineText": "P review",
+                "Words": [{
+                    "WordText": "P",
+                    "Left": 427.0,
+                    "Top": 6.0,
+                    "Height": 17.0,
+                    "Width": 12.0
+                }, {
+                    "WordText": "review",
+                    "Left": 443.0,
+                    "Top": 4.0,
+                    "Height": 18.0,
+                    "Width": 65.0
+                }],
+                "MaxHeight": 18.0,
+                "MinTop": 4.0
+            }],
+            "HasOverlay": true,
+            "Message": "Total lines: 1"
+        },
+        "TextOrientation": "0",
+        "FileParseExitCode": 1,
+        "ParsedText": "P review\r\n",
+        "ErrorMessage": "",
+        "ErrorDetails": ""
+    }],
+    "OCRExitCode": 1,
+    "IsErroredOnProcessing": false,
+    "ProcessingTimeInMilliseconds": "312",
+    "SearchablePDFURL": "Searchable PDF not generated as it was not requested."
+}

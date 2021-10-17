@@ -2,7 +2,6 @@
 Screen Mapping Class is in charge of keeping track of the location of widgets detected by Mapper
 """
 
-
 class ScreenMap:
     def __init__(self):
         self.gui_map = dict()
@@ -18,6 +17,21 @@ class ScreenMap:
             return True
         else:
             return False
+#############################
+    def entity_to_widget(self,entity_name:str):
+        import difflib
+        # you could potentially add heuristics here to match the entity to the exact widget you want, assuming you know
+        # ahead of time what widgets you have
+        # for example, here is a heuristic that changes letter-numerals to digit-numerals
+        entity_name=entity_name.replace('one','1'); entity_name=entity_name.replace('two','2')
+        #unsure if luis.ai will output uppercase letters but just in case
+        entity_name=entity_name.replace('One','1'); entity_name=entity_name.replace('Two','2') 
+        if difflib.get_close_matches(entity_name, self.gui_map.keys(), n=3) != []:
+            print(f'The entity \'{entity_name}\' matches closest to these keys {difflib.get_close_matches(entity_name, self.gui_map.keys(), n=3)}')
+            matching_key = difflib.get_close_matches(entity_name, self.gui_map.keys(), n=1)[0]
+            return matching_key, self.get_keys_coordinates(matching_key)
+        print('There were no matches to the given speech entity.')
+        return None
 
     def locate_label(self, entity_name: str):
         """
@@ -27,10 +41,11 @@ class ScreenMap:
         """
         self.check_type(entity_name, str,
                         "locate_label(self, entity_name: str)")
-        for key in self.gui_map.keys():
-            if entity_name in key:
-                return key, self.get_keys_coordinates(key)
-
+        return self.entity_to_widget(entity_name)
+        # for key in self.gui_map.keys():
+        #     if entity_name in key:
+        #         return key, self.get_keys_coordinates(key)
+#############################
     def add_widget(self, key: str, x: int, y: int):
         """
         Add widget to map

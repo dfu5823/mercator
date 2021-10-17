@@ -45,11 +45,6 @@ def ocr_space_matching(map: ScreenMap, showResults=False):
                         f'The image {fn} was correctly parsed with outputs below:')
                     print(f'  All lines of text: {all_lines}')
                     print(f'  All locations of text: {all_locations}')
-            # TODO: make coordinates of rectangle for each text element in the image compatible with mapping.py
-            # this will involve a refactoring of map_interface to be more generic (not just specific to contour_matching, see view.py)
-            # ADDING WIDGET NEEDS TO HAPPEN OUTSIDE OF THIS METHOD
-            #reader = view.UIReader()
-            #reader.gui_map.add_widget(button_label, center_x, center_y)
             for text_index in range(len(all_lines)):
                 button_label = all_lines[text_index]
                 center_x = all_locations[text_index][0]
@@ -59,6 +54,14 @@ def ocr_space_matching(map: ScreenMap, showResults=False):
             continue
     end_time = time.time()
     elapsed_time = end_time - start_time
+
+############################ Here is a heuristic that should duplicate keys from the list (eg. Volume and volume)
+    # Needs to be fixed so it actually removes duplicates and ignores case
+    #  for key in map.gui_map.keys():
+    #     if map.gui_map.keys().count(key) > 1:
+    #         map.remove_widget(key)
+############################
+
     if num_images == 0:
         print(f'The directory {directory} did not contain any .jpg or .png images.')
     else: 
@@ -69,4 +72,26 @@ def ocr_space_matching(map: ScreenMap, showResults=False):
 map = ScreenMap()
 ocr_space_matching(map)
 map.print_map()
-print('\n\n\n\n')
+print('\n\n')
+print(map.entity_to_widget("Windowing"))
+print('\n')
+print(map.entity_to_widget("Conference"))
+print('\n')
+print(map.entity_to_widget("Conference In"))
+print('\n')
+print(map.entity_to_widget("Volume Up"))
+print('\n')
+print(map.entity_to_widget("Aux 1"))
+print('\n')
+print(map.entity_to_widget("ox one"))
+print('\n')
+print(map.entity_to_widget("Wall Display One"))
+print('\n')
+print(map.entity_to_widget("Wall Display Two"))
+print('\n')
+print(map.entity_to_widget("Four K Surgical Display One"))
+print('\n')
+print(map.entity_to_widget("Four K Surgical Display Two"))
+print('\n')
+print(map.entity_to_widget("Surgical Display One"))
+print('\n')

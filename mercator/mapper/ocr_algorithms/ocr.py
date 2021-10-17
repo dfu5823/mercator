@@ -1,5 +1,7 @@
 import time
 import cv2
+from mercator.mapper.mapper import Mapper
+from mercator.mapper.mapping import ScreenMap
 import mercator.mapper.utils as utils
 from mercator.mapper.mapping_algorithms import ocr_space_methods
 import logging

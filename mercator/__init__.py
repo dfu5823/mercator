@@ -15,7 +15,8 @@ from mapper.mapper import Mapper
 
 ''' Add the path to file here eg. from mercator.mapper.mapping_algorithms.ocr_space_matching import ocr_space_matching'''
 from mercator.mapper.mapping_algorithms.ocr_space_matching import ocr_space_matching
-from mercator.mapper.ocr_algorithms.ocr import extract_text
+# from mercator.mapper.ocr_algorithms.ocr import extract_text
+# from mercator import mapping
 ''''''
 
 def create_app():
